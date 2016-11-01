@@ -24,7 +24,7 @@ You can view code examples in the dark area to the right. The api endpoint in th
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "https://hydra-development.herokuapp.com" -H "Authorization: meowmeowmeow"
+curl "https://hydra-development.herokuapp.com/api" -H "Authorization: meowmeowmeow"
 ```
 
 > Make sure to replace `meowmeowmeow` with the user's authorization token.
@@ -45,9 +45,7 @@ You must replace `meowmeowmeow` with your personal API key.
 
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-curl "https://hydra-development.herokuapp.com/people"
+curl "https://hydra-development.herokuapp.com/api/people"
   -H "Authorization:meowmeowmeow" 
 ```
 
