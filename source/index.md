@@ -255,4 +255,4 @@ This endpoint deletes a specific person along with associated objects.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the person to update
+ID | The ID of the person to delete
