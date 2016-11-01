@@ -319,3 +319,38 @@ Parameter | Description
 --------- | -----------
 PERSON_ID | The ID of the person to retrieve
 ID | The ID of the contact info item to retrieve
+
+
+## Create Contact Info
+
+
+```shell
+curl "https://hydra-development.herokuapp.com/api/people/101/contact_info" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X POST -d '{ "contact_category": "work", "contact_type": "internet phone", "contact_data": "6509899999" }'
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 102,
+  "contact_category": "work",
+  "contact_type": "internet phone",
+  "contact_data": "6509899999",
+  "person_id": 101,
+  "created_at": "2016-11-01T06:45:45.777Z",
+  "updated_at": "2016-11-01T06:45:45.777Z"
+}
+```
+
+This endpoint created a contact info entry for a specific person.
+
+
+### HTTP Request
+
+`POST https://hydra-development.herokuapp.com/api/people/<ID>/contact_info`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the person to add contact info entry
