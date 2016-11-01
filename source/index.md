@@ -99,54 +99,33 @@ This endpoint retrieves all people records owned by the user. The results includ
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
 
 
-## Get a Specific Kitten
 
-```ruby
-require 'kittn'
+## Get a Specific Person
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
 
 ```shell
-curl "http://example.com/api/kittens/3"
-  -H "Authorization: meowmeowmeow"
+curl "https://hydra-development.herokuapp.com/api/people/99"
+  -H "Authorization:meowmeowmeow"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-{
-  "id": 2,
-  "name": "Isis",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
+{"id":99,"first_name":"Kay","last_name":"Lang","profile_picture":null,"organization_id":null,"created_at":"2016-10-28T18:43:46.473Z","updated_at":"2016-10-28T18:43:46.473Z","contact_info":[{"person_id":99,"id":99,"contact_category":"fax","contact_type":"home","contact_data":"(289) 853-6383","created_at":"2016-10-28T18:43:46.478Z","updated_at":"2016-10-28T18:43:46.478Z"}]}
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific person.
 
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://hydra-development.herokuapp.com/api/people/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the cat to retrieve
+ID | The ID of the person to retrieve
 
