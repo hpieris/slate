@@ -189,11 +189,13 @@ This endpoint creates a person.
 Parameter | Description
 --------- | -----------
 
-## Update a Specific Person
+
+## Get a Specific Person
 
 
 ```shell
-curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X PUT -d '{"first_name": "xyz","last_name": "xyz","profile_picture": ""}'
+curl "https://hydra-development.herokuapp.com/api/people/99"
+  -H "Authorization:meowmeowmeow"
 ```
 
 > The above command returns JSON structured like this:
@@ -201,21 +203,53 @@ curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:m
 ```json
 {
   "id": 99,
-  "first_name": "xyz",
-  "last_name": "xyz",
-  "profile_picture": "",
+  "first_name": "Kay",
+  "last_name": "Lang",
+  "profile_picture": null,
   "organization_id": null,
   "created_at": "2016-10-28T18:43:46.473Z",
-  "updated_at": "2016-11-01T03:37:40.879Z"
+  "updated_at": "2016-10-28T18:43:46.473Z",
+  "contact_info": [{
+    "person_id": 99,
+    "id": 99,
+    "contact_category": "fax",
+    "contact_type": "home",
+    "contact_data": "(289) 853-6383",
+    "created_at": "2016-10-28T18:43:46.478Z",
+    "updated_at": "2016-10-28T18:43:46.478Z"
+  }]
 }
 ```
 
-This endpoint updates a specific person's basic information.
+This endpoint retrieves a specific person.
 
 
 ### HTTP Request
 
-`PUT https://hydra-development.herokuapp.com/api/people/<ID>`
+`GET https://hydra-development.herokuapp.com/api/people/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the person to retrieve
+
+## Delete a Specific Person
+
+
+```shell
+curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X DELETE
+```
+
+> The above command returns an empty respons with OK status
+
+
+This endpoint deletes a specific person along with associated objects.
+
+
+### HTTP Request
+
+`DELETE https://hydra-development.herokuapp.com/api/people/<ID>`
 
 ### URL Parameters
 
