@@ -382,7 +382,31 @@ This endpoint updates a specific contact info entry.
 
 ### HTTP Request
 
-`GET https://hydra-development.herokuapp.com/api/people/<PERSON_ID>/contact_info/<ID>`
+`PUT https://hydra-development.herokuapp.com/api/people/<PERSON_ID>/contact_info/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+PERSON_ID | The ID of the person
+ID | The ID of the contact info item to update
+
+
+## Delete a Specific Contact Info Item
+
+
+```shell
+curl "https://hydra-development.herokuapp.com/api/people/101/contact_info/102" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X DELETE
+```
+
+> The above command returns an empty respons with OK status
+
+This endpoint deletes a specific contact info item that belongs to a specific person.
+
+
+### HTTP Request
+
+`DELETE https://hydra-development.herokuapp.com/api/people/<PERSON_ID>/contact_info/ID`
 
 ### URL Parameters
 
