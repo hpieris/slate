@@ -283,3 +283,39 @@ This endpoint retrieves all contact information objects for a specific person.
 Parameter | Description
 --------- | -----------
 PERSON_ID | The ID of the person to retrieve
+
+## Get a Specific Contact Info
+
+
+```shell
+curl "https://hydra-development.herokuapp.com/api/people/101/contact_info/100"
+  -H "Authorization:meowmeowmeow"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "person_id": 101,
+  "id": 100,
+  "contact_category": "work",
+  "contact_type": "desk phone",
+  "contact_data": "6509898787",
+  "created_at": "2016-11-01T03:24:18.508Z",
+  "updated_at": "2016-11-01T03:24:18.508Z"
+}
+```
+
+This endpoint retrieves a specific person.
+
+
+### HTTP Request
+
+`GET https://hydra-development.herokuapp.com/api/people/<ID>/contact_info/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+PERSON_ID | The ID of the person to retrieve
+ID | The ID of the contact info item to retrieve
