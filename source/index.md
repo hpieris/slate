@@ -47,7 +47,8 @@ You must replace `meowmeowmeow` with your personal API key.
 ```shell
 curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
-curl https://hydra-development.herokuapp.com/people -H "Authorization:meowmeowmeow" 
+curl "https://hydra-development.herokuapp.com/people"
+  -H "Authorization:meowmeowmeow" 
 ```
 
 > The above command returns JSON structured like this:
