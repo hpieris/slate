@@ -15,7 +15,7 @@ search: true
 
 Welcome to the Hydra API. You can use our API to access the object model and perform CRUD operations.
 
-You can view code examples in the dark area to the right. The api endpoint in the examples are for our development environment.
+You can view code examples in the dark area to the right. The api endpoint in the examples is for our development environment.
 
 
 # Authentication
@@ -29,9 +29,9 @@ curl "https://hydra-development.herokuapp.com" -H "Authorization: meowmeowmeow"
 
 > Make sure to replace `meowmeowmeow` with your authorization token.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Hydra uses authorization tokens to allow access to the API.
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+The API expects for the authorization token to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 
@@ -39,23 +39,10 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace `meowmeowmeow` with your personal API key.
 </aside>
 
-# Kittens
+# People
 
-## Get All Kittens
+## Get All People
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
 
 ```shell
 curl "http://example.com/api/kittens"
@@ -83,7 +70,7 @@ curl "http://example.com/api/kittens"
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all people records owned by the user.
 
 ### HTTP Request
 
