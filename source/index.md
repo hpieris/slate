@@ -113,7 +113,24 @@ curl "https://hydra-development.herokuapp.com/api/people/99"
 > The above command returns JSON structured like this:
 
 ```json
-{"id":99,"first_name":"Kay","last_name":"Lang","profile_picture":null,"organization_id":null,"created_at":"2016-10-28T18:43:46.473Z","updated_at":"2016-10-28T18:43:46.473Z","contact_info":[{"person_id":99,"id":99,"contact_category":"fax","contact_type":"home","contact_data":"(289) 853-6383","created_at":"2016-10-28T18:43:46.478Z","updated_at":"2016-10-28T18:43:46.478Z"}]}
+{
+  "id": 99,
+  "first_name": "Kay",
+  "last_name": "Lang",
+  "profile_picture": null,
+  "organization_id": null,
+  "created_at": "2016-10-28T18:43:46.473Z",
+  "updated_at": "2016-10-28T18:43:46.473Z",
+  "contact_info": [{
+    "person_id": 99,
+    "id": 99,
+    "contact_category": "fax",
+    "contact_type": "home",
+    "contact_data": "(289) 853-6383",
+    "created_at": "2016-10-28T18:43:46.478Z",
+    "updated_at": "2016-10-28T18:43:46.478Z"
+  }]
+}
 ```
 
 This endpoint retrieves a specific person.
@@ -129,3 +146,45 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the person to retrieve
 
+## Create a Person
+
+
+```shell
+curl "https://hydra-development.herokuapp.com/api/people"
+  -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X POST -d '{ "first_name": "aaa", "last_name": "bbb", "profile_picture": "", "contact_info": [{ "contact_category": "work", "contact_type": "desk phone", "contact_data": "6509898787" }] }'
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 102,
+  "first_name": "aaa",
+  "last_name": "bbb",
+  "profile_picture": "",
+  "organization_id": null,
+  "created_at": "2016-11-01T03:24:49.014Z",
+  "updated_at": "2016-11-01T03:24:49.014Z",
+  "contact_info": [{
+    "id": 101,
+    "contact_category": "work",
+    "contact_type": "desk phone",
+    "contact_data": "6509898787",
+    "person_id": 102,
+    "created_at": "2016-11-01T03:24:49.020Z",
+    "updated_at": "2016-11-01T03:24:49.020Z"
+  }]
+}
+```
+
+This endpoint creates a person.
+
+
+### HTTP Request
+
+`POST https://hydra-development.herokuapp.com/api/people/`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
