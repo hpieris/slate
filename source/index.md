@@ -414,3 +414,30 @@ Parameter | Description
 --------- | -----------
 PERSON_ID | The ID of the person
 ID | The ID of the contact info item to update
+
+# Phone Lines
+
+## Get Available Phone Lines
+
+```shell
+curl -w '%{http_code}' https://hydra-development.herokuapp.com/api/phone_lines
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+["+16178498655","+16173268684","+16177625529","+16179347767","+16174889425","+16173608701","+16178603060","+16177625190","+16177625245","+16174407211","+16176074487","+16179348254","+16179347230","+16174889421","+16178603646","+16179368793","+16173408773","+16175803369","+16177516484","+16176489887","+16174010476","+16178603263","+16179340031","+16175051855","+16176827547","+16176124257","+16174311276","+16173408474","+16176065854","+16173793689"]
+```
+
+This endpoint retrieves available phone numbers for the given area code.
+
+### HTTP Request
+
+`GET https://hydra-development.herokuapp.com/api/people`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+area_code| preferred area code
