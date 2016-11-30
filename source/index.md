@@ -434,7 +434,7 @@ This endpoint retrieves available phone numbers for the given area code.
 
 ### HTTP Request
 
-`GET https://hydra-development.herokuapp.com/api/people`
+`GET https://hydra-development.herokuapp.com/api/phone_lines`
 
 ### Query Parameters
 
