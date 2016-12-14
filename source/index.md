@@ -441,3 +441,30 @@ This endpoint retrieves available phone numbers for the given area code.
 Parameter | Description
 --------- | -----------
 area_code| preferred area code
+
+# Access Tokens
+
+## Retrieve Access Token with Google Token
+
+```shell
+curl -w '%{http_code}' "https://hydra-development.herokuapp.com/api/access_tokens" -H "Content-Type: application/json" -X POST -d '{ "g_token":"GOOGLE_ACCESS_TOKEN"}'
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{"id":10,"auth_token":"yuewejqheu-HlW-HCSUr9qnQw","user_id":3,"created_at":"2016-12-14T03:18:18.081Z","updated_at":"2016-12-14T03:18:18.081Z","device_id":"0"}
+```
+
+This endpoint retrieves a Hydra access token.
+
+### HTTP Request
+
+`POST https://hydra-development.herokuapp.com/api/access_tokens`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+g_token| Access token issued through Google sign-in
