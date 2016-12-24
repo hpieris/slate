@@ -1,0 +1,66 @@
+VS5vuyw_TF7kFkNr34IDaA
+
+
+curl --insecure "https://localhost:3000/api/people" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA"
+
+
+curl "https://hydra-development.herokuapp.com/api/people" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X POST -d '{ "uuid": "100100100100", "first_name": "aaa", "last_name ": "bbb ", "profile_picture ": "", "contact_info ": [{ "uuid ": "200200200200 ", "contact_category ": "work ", "contact_type ": "desk phone ", "contact_data ": "6509898787 " }] }"
+
+curl -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X POST -d '{ "uuid": "100100100100", "first_name": "aaa", "last_name ": "bbb ", "profile_picture ": "", "contact_info ": [{ "uuid ": "200200200200 ", "contact_category ": "work ", "contact_type ": "desk phone ", "contact_data ": "6509898787 " }] }'
+
+curl --insecure "https://localhost:3000/api/people" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X POST -d '{ "first_name": "aaa", "last_name": "bbb", "profile_picture": "", "contact_info": [{ "contact_category": "work", "contact_type": "desk phone", "contact_data": "6509898787" }] }'
+
+curl "https://hydra-development.herokuapp.com/api/people" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X POST -d '{ "first_name": "aaa", "last_name": "bbb", "profile_picture": "", "contact_info":[{ "contact_category": "work", "contact_type": "desk phone", "contact_data": "6509898787" }] }'
+
+curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X PUT -d '{"first_name": "xyz","last_name": "xyz","profile_picture": ""}'
+
+curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X PUT -d '{"first_name": "xyz","last_name": "xyz","profile_picture": ""}'
+
+curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X DELETE
+
+curl "https://hydra-development.herokuapp.com/api/people/99" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X DELETE
+
+curl "https://hydra-development.herokuapp.com/api/people/101/contact_info"
+  -H "Authorization:meowmeowmeow"
+
+ curl "https://hydra-development.herokuapp.com/api/people/99/contact_info/100" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA"
+
+ curl "https://hydra-development.herokuapp.com/api/people/101/contact_info" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X POST -d '{ "contact_category": "work", "contact_type": "internet phone", "contact_data": "6509899999" }'  
+
+ curl "https://hydra-development.herokuapp.com/api/people/101/contact_info" -H "Authorization:meowmeowmeow" -H "Content-Type: application/json" -X POST -d '{ "contact_category": "work", "contact_type": "internet phone", "contact_data": "6509899999" }'
+
+ curl "https://hydra-development.herokuapp.com/api/people/101/contact_info/102" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X PUT -d '{ "contact_category": "work", "contact_type": "cell phone", "contact_data": "6509899999" }'
+
+
+ curl "https://hydra-development.herokuapp.com/api/people/101/contact_info/102" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X DELETE  
+
+
+curl "https://hydra-development.herokuapp.com/api/sales_team/1/subscriptions" -H "Content-Type: application/json" -X POST -d '{ "user_id": "3", "payment_method_nonce": "132c773c-ed00-00de-168a-af6379f230d3" }'
+
+  curl "https://hydra-development.herokuapp.com/api/phone_lines" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA" -H "Content-Type: application/json" -X POST -d '{ "phone": "+13104802192" }'  
+
+
+
+       for cells in tableView.visibleCells as! [MobileNoCell] {
+           cells.radioBtn.setImage(UIImage(named: "unchecked.png"), forState: .Normal)
+        }
+        
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? MobileNoCell {
+            cell.radioBtn.setImage(UIImage(named: "checked.png"), forState: .Normal)
+            
+        }
+curl "https://hydra-development.herokuapp.com/api/get_call_log" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA"
+
+curl "https://hydra-development.herokuapp.com/api/get_test_token" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA"
+
+curl "https://hydra-development.herokuapp.com/api/organizations" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA"
+
+ curl "https://hydra-development.herokuapp.com/api/sales_teams/8/users" -H "Content-Type: application/json" -X POST -d '{"user": { "first_name": "Aerie", "last_name": "Pieris", "email": "aerie@gmail.com" }}'
+
+curl "https://hydra-development.herokuapp.com/api/access_tokens/user"  -H "Content-Type: application/json" -X GET -d '{"g_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjllMDIxNTdiMTczNzkwOTY2ZDMyMTEzMGY4Yjc2Mjc2NzRhYjFlZDUifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJpYXQiOjE0ODE5NTc4MDMsImV4cCI6MTQ4MTk2MTQwMywiYXRfaGFzaCI6Ill6cExrQVc2bmxRYmVoSkpfanFjZHciLCJhdWQiOiI0NTk0NjI5MDIwOTctaG41ZWkydXJzNGM4aHRrcGVjYmVpcmRpbDJwdG9mN3IuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDYyMDk5MDczMDQ1ODM0MjU5NDEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXpwIjoiNDU5NDYyOTAyMDk3LWhuNWVpMnVyczRjOGh0a3BlY2JlaXJkaWwycHRvZjdyLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiZW1haWwiOiJocGllcmlzQGdtYWlsLmNvbSJ9.nyQnxuQmW_34fiCQo0mwfYaO2lwDH3j0h31RoZiY_8GLIyyBnAz0BbbWUjaVbu_oU61BVMORhiRIm0480VUyEmS0zoOA-tRlNu3MBclLHbSG_Y5vP9h7e7A6rtyGIAdVv3ZSgFbKgg4igTFphQa63soZ_-xmUBGD3dtjkW8fWtcdIacMSohPFdfFAFMPRHDLuZfeam5FIYGfG-8RZEFx1qFRMB2RudcLNoc5uV3RLjM8fJQKWHxvtEybmUkPeEiXsYQ1-tZw1m4A6Sd1zKqMdFlh1QsKOnIl01R6ChXdq05ZoaKAU1XRNJ457kLaucHWm2lqIAz0mpwnoqrcZWcqHw" }'
+
+
+curl -w "%{http_code}" "https://hydra-development.herokuapp.com/api/organizations" -H "Authorization:meowmeowmeow"
+
+curl -w "%{http_code}" "https://hydra-development.herokuapp.com/api/organizations" -H "Authorization:VS5vuyw_TF7kFkNr34IDaA"
+ 

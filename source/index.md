@@ -39,6 +39,33 @@ The API expects for the authorization token to be included in all API requests t
 You must replace `meowmeowmeow` with the user's authorization token.
 </aside>
 
+# Organizations
+
+## Get Organizations
+
+```shell
+curl -w "%{http_code}" "https://hydra-development.herokuapp.com/api/organizations" -H "Authorization:meowmeowmeow"
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[{"sales_team_id":1,"id":2,"name":"Default Org","description":null,"created_at":"2016-11-15T05:32:39.860Z","updated_at":"2016-11-15T05:32:39.860Z"},{"sales_team_id":1,"id":11,"name":"EMC","description":"Software and hardware company","created_at":"2016-12-24T07:52:25.837Z","updated_at":"2016-12-24T07:54:41.378Z"},{"sales_team_id":1,"id":12,"name":"Google","description":null,"created_at":"2016-12-24T07:55:26.309Z","updated_at":"2016-12-24T07:55:26.309Z"},{"sales_team_id":1,"id":13,"name":"Ebay","description":null,"created_at":"2016-12-24T07:55:38.302Z","updated_at":"2016-12-24T07:55:38.302Z"},{"sales_team_id":1,"id":14,"name":"Apple","description":null,"created_at":"2016-12-24T07:55:55.960Z","updated_at":"2016-12-24T07:55:55.960Z"},{"sales_team_id":1,"id":15,"name":"Oracle","description":null,"created_at":"2016-12-24T07:56:10.606Z","updated_at":"2016-12-24T07:56:10.606Z"}]
+```
+
+This endpoint retrieves available phone numbers for the given area code.
+
+### HTTP Request
+
+`GET https://hydra-development.herokuapp.com/api/organizations`
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+|
+
 # People
 
 ## Get All People
